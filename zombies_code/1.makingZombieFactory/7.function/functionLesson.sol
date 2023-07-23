@@ -14,6 +14,5 @@ constract ZombieFactory {
 
   // here you make function name is Zombie
   function createZombie(string _name, uint _dna) {
-    
   }
 }
