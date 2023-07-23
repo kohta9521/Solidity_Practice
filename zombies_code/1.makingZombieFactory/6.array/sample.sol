@@ -3,11 +3,13 @@ pragma solidity ^0.8.14;
 
 contract ZombieFactory {
     uint dnaDigits = 16;
-    uint dnaModuls = 10 ** dnaDigits;
+    uint dnaModulus = 10 ** dnaDigits;
 
-    // here you make Zombie struct
     struct Zombie {
         string name;
         uint dna;
     }
+
+    // here you make public Zombies Array
+    Zombie[] public zombies;
 }
