@@ -1,6 +1,7 @@
 // SPDX-License-Identifier: MIT
 pragma solidity ^0.8.14;
 
+
 contract ZombieFactory {
   uint dnaDigits = 16;
   uint dnaModulus = 10 ** dnaDigits;
@@ -12,7 +13,8 @@ contract ZombieFactory {
 
   Zombie[] public zombies;
 
-  // here you make function name is Zombie
   function createZombie(string _name, uint _dna) {
+    // here start
+    zombies.push(Zombie(_name, _dna));
   }
 }
