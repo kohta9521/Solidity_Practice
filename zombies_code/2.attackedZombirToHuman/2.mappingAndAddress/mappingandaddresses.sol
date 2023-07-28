@@ -2,7 +2,6 @@
 pragma solidity ^0.8.14;
 
 contract ZombieFactory {
-    // enet
     event NewZombie(uint zombieId, string name, uint dna);
 
     uint dnaDigits = 16;
@@ -15,9 +14,12 @@ contract ZombieFactory {
 
     Zombie[] public zombies;
 
+    // ここでマッピングを宣言するのだ
+    mapping () public zombieToOwner;
+    mapping (address => uint) ownerZombieCount;
+
     function _createZombie(string _name, uint _dna) private {
-        zombies.push(_name, _dna);
-        uint id = zombies.push(Zombie(_name, _dna));
+        uint id = zombies.push(Zombie(_name, _dna)) - 1;
         NewZombie(id, _name, _dna);
     }
 
