@@ -12,6 +12,7 @@ const Navbar = () => {
         <li>ブロックチェーン</li>
         <li>ウォレット</li>
       </ul>
+      <button>ログイン</button>
     </nav>
   );
 };
