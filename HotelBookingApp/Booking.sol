@@ -29,3 +29,4 @@ contract HotelBooking {
         owner.transfer(msg.value);
     }
 }
+
