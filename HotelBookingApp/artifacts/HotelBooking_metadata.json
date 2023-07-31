@@ -11,6 +11,19 @@
 				"type": "constructor"
 			},
 			{
+				"anonymous": false,
+				"inputs": [
+					{
+						"indexed": false,
+						"internalType": "address",
+						"name": "",
+						"type": "address"
+					}
+				],
+				"name": "DebugOwenerLog",
+				"type": "event"
+			},
+			{
 				"inputs": [],
 				"name": "booking",
 				"outputs": [],
@@ -72,11 +85,11 @@
 	},
 	"sources": {
 		"Users/kohtakochi/Desktop/programming/lang/Solidity/HotelBookingApp/Booking.sol": {
-			"keccak256": "0x768f27df2700e467ec4b7395378ee86f023407e1d0cebd3cadbceaaa61f999dd",
+			"keccak256": "0x74d212e8e6ae175640bd909b4e0a23801763302c51e85cc14f46dfd6471d6d63",
 			"license": "MIT",
 			"urls": [
-				"bzz-raw://a7d8a6f87c065b222eda6983fc679a6d302f353db0b6042a3a169250b57a0daa",
-				"dweb:/ipfs/QmVo5NTJpM2hEbvzsh6gzBMTawqXvxXYkgmdyQQLw2wdSQ"
+				"bzz-raw://934d024ec2f18031e9fa78c321458528a55deb0973d55ae518172afe577beb99",
+				"dweb:/ipfs/QmYdyfPrzThfTJKw8Zbzg5sN9ozbk4sbsATGGA7xxFRxRE"
 			]
 		}
 	},

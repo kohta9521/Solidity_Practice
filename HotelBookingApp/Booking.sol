@@ -29,12 +29,17 @@ contract HotelBooking {
         _; 
     }
 
+    event DebugOwenerLog(address);
+
     // 予約用関数
     function booking() public payable onlyWhiteVacant costs(2 ether) {
         // 満室状態にする
         currentStatuses = Statuses.Occpied;
         // オーナーにお金を送金する
         owner.transfer(msg.value);
+
+        // debug
+        emit DebugOwenerLog(owner);
     }
 }
 
