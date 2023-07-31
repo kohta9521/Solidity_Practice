@@ -2,7 +2,7 @@ import React from "react";
 
 const Main = () => {
   return (
-    <div className="mainConainer">
+    <div className="mainContainer">
       <div className="cryptContainer">
         <h1 className="title">Crypt Card</h1>
         <button type="button">
@@ -11,7 +11,13 @@ const Main = () => {
       </div>
       <div className="inputContainer">
         <input type="text" placeholder="アドレス" name="addressTo" />
-        <input type="number" placeholder="通貨(ETH)" name="amount" />
+        <input
+          type="number"
+          placeholder="通貨(ETH)"
+          name="amount"
+          step="0.001"
+        />
+        <button type="button">送信</button>
       </div>
     </div>
   );
