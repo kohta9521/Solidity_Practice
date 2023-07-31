@@ -1,7 +1,19 @@
 import React from "react";
 
 const Navbar = () => {
-  return <div>navbar</div>;
+  return (
+    <nav>
+      <div className="logo">
+        <h2>BlockChains</h2>
+      </div>
+      <ul className="navLinks">
+        <li>マーケット</li>
+        <li>交換</li>
+        <li>ブロックチェーン</li>
+        <li>ウォレット</li>
+      </ul>
+    </nav>
+  );
 };
 
 export default Navbar;
