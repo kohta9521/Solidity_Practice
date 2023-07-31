@@ -17,15 +17,29 @@ contract HotelBooking {
         currentStatuses = Statuses.Vacant;
     }
 
-    // 予約用関数
-    function booking() public payable {
+    modifier onlyWhiteVacant {
         // 満室かどうかチェックする
         require(currentStatuses == Statuses.Vacant, "alredy ocuppied");
+        _;     
+    }
+
+    modifier costs(uint _amount) {
         // 金が足りるかどうかのチェック
-        require(msg.value >= 2, "Not enough ether");
+        require(msg.value >= _amount, "Not enough ether");
+        _; 
+    }
+
+    event DebugOwenerLog(address);
+
+    // 予約用関数
+    function booking() public payable onlyWhiteVacant costs(2 ether) {
         // 満室状態にする
         currentStatuses = Statuses.Occpied;
         // オーナーにお金を送金する
         owner.transfer(msg.value);
+
+        // debug
+        emit DebugOwenerLog(owner);
     }
 }
+
